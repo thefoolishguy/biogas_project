@@ -31,7 +31,8 @@ class Login extends React.Component {
       })
       .then((res)=>{
 //         console.log(res)
-        if(res.payload == 1){
+        const response = JSON.parse(res.body);
+        if(response.payload == 1){
           <Graphic />
         }
         else{
