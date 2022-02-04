@@ -25,9 +25,18 @@ class Login extends React.Component {
         Password: this.state.Password
       }
 
-      axios.get('https://jsonplaceholder.typicode.com/posts',data)
+      axios.post('https://ehy3b0lyhk.execute-api.us-east-1.amazonaws.com/release/loginbiogas',{
+        "device_id": data.ID,
+        "password": data.Password
+      })
       .then((res)=>{
-        console.log(res)
+//         console.log(res)
+        if(res.payload == 1){
+          <graphic />
+        }
+        else{
+          <login />  
+        }
       }).catch((err)=>{
         console.log(err)
       })
