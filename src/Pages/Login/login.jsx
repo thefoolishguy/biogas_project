@@ -32,10 +32,10 @@ class Login extends React.Component {
       .then((res)=>{
 //         console.log(res)
         if(res.payload == 1){
-          <graphic />
+          <Graphic />
         }
         else{
-          <login />  
+          <Login />  
         }
       }).catch((err)=>{
         console.log(err)
