@@ -5,7 +5,7 @@ import bgImg from '../../asset/image.JPEG'
 import {Nav} from "../navbar"
 import axios from 'axios'
 import ReactDOM from "react-dom";
-import Graphic from "./Pages/Graphic/Graphic";
+import Graphic from "../Graphic/Graphic";
 
 class Login extends React.Component {
     constructor(){
