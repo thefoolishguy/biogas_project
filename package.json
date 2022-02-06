@@ -1,6 +1,8 @@
 {
   "name": "tes",
   "version": "0.1.0",
+  "proxy": "https://ehy3b0lyhk.execute-api.us-east-1.amazonaws.com",
+  "homepage": "https://master.d3son2dy5qb3eb.amplifyapp.com/",
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^2.11.0",
