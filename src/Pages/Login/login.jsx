@@ -5,9 +5,9 @@ import bgImg from '../../asset/image.JPEG'
 import {Nav} from "../navbar"
 import axios from 'axios'
 import ReactDOM from "react-dom";
-import Graphic from "../Graphic/Graphic";
+import Graphic from "../Graphic/Graphic"
 
-class Login extends React.Component {
+class Login extends React.Component { 
     constructor(){
       super();
       this.state={
@@ -26,14 +26,17 @@ class Login extends React.Component {
         Password: this.state.Password
       }
 
-      axios.post('https://ehy3b0lyhk.execute-api.us-east-1.amazonaws.com/release/loginbiogas',{
+      axios.post('/release/loginbiogas', {
         "device_id": data.ID,
         "password": data.Password
+      },{ headers: {
+        "Access-Control-Allow-Origin": "*"
+        }
       })
       .then((res)=>{
 //         console.log(res)
         const response = JSON.parse(res.body);
-        if(response.payload == 1){
+        if(response.payload === 1){
           <Graphic />
         }
         else{
